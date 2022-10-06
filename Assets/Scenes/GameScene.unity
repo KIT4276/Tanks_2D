@@ -16801,6 +16801,59 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1944414401}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1949375765
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1949375767}
+  - component: {fileID: 1949375766}
+  m_Layer: 0
+  m_Name: Sounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1949375766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949375765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e90e10b6d6460a4791e9ed2e4f0513b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _brickhit: {fileID: 8300000, guid: b2aca67fdb498a2488c1c086e9010b5f, type: 3}
+  _eexplosion: {fileID: 8300000, guid: da364f197b8ef0541a27f5b0cbb9e4bd, type: 3}
+  _fexplosion: {fileID: 8300000, guid: c92201c1f8a1b0941bddf1c90778876b, type: 3}
+  _gameover: {fileID: 8300000, guid: 0f2ac50e47f6e334c93f3596dc22fdda, type: 3}
+  _levelstarting: {fileID: 8300000, guid: 54cb01511a93c124ba9484e045e2e937, type: 3}
+  _moving: {fileID: 8300000, guid: 7c16dba704e9da44589a72cfabe80e74, type: 3}
+  _nmoving: {fileID: 8300000, guid: cec8dcda05d259149801cce02f397880, type: 3}
+  _pause: {fileID: 8300000, guid: 01a5349e030f17142994b5414853cc85, type: 3}
+  _shoot: {fileID: 8300000, guid: d3341456bc0a59345be5b5b739493099, type: 3}
+  _tbonushit: {fileID: 8300000, guid: ad60ecdb6269e7f4d8139a95e65cf8f0, type: 3}
+--- !u!4 &1949375767
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949375765}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.24622783, y: -0.5962738, z: -8.643517}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1950217058
 PrefabInstance:
   m_ObjectHideFlags: 0
