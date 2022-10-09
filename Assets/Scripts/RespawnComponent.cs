@@ -15,7 +15,6 @@ namespace Tanks
         [SerializeField]
         private Transform[] _respawnPoinrs;
 
-
         private void Start()
         {
             _maxNumberOfBots = (int)TransferSettings.BotsCount;

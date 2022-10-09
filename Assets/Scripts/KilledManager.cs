@@ -9,8 +9,6 @@ namespace Tanks
         public int EnemiesKilled { get => _enemiesKilled; }
 
         public void EnemiesKilledCounter()
-        {
-            _enemiesKilled++;
-        }
+            => _enemiesKilled++;
     }
 }

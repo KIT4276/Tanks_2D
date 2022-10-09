@@ -200,7 +200,7 @@ MonoBehaviour:
   _moveSpeed: 1
   _nmoving: {fileID: 0}
   _minMoveTime: 1
-  _maxMoveTime: 5
+  _maxMoveTime: 10
 --- !u!82 &6889119212942017714
 AudioSource:
   m_ObjectHideFlags: 0
@@ -310,7 +310,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafdbd8356cdf044e82bca94526d6674, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameOverImage: {fileID: 6866865536793060807, guid: c6455d6339efa264e9883816c3bd5242,
-    type: 3}
-  _victoryImage: {fileID: 7878813511672037028, guid: f5ad7eef235b9e84aad90af6ab768705,
-    type: 3}

@@ -4,14 +4,14 @@ namespace Tanks
 {
     public class MoveComponent : MonoBehaviour
     {
+        private static bool _canMove = true;
+
         private bool _balk;
 
         [SerializeField]
         private float _moveSpeed = 1f;
         [SerializeField]
         private AudioSource _nmoving;
-        
-        private static bool _canMove = true;
 
         public bool CanMove { get => _canMove; }
 

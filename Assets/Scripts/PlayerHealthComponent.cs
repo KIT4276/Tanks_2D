@@ -24,7 +24,6 @@ namespace Tanks
         [Space, SerializeField]
         private Text _lifesCountText;
 
-
         private void Start()
         {
             _startPoint = transform.position;

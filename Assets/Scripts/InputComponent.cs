@@ -33,10 +33,10 @@ namespace Tanks
 
             var direction = _move.ReadValue<Vector2>();
             DirectionType type;
+
             if (direction.x != 0f && direction.y != 0f)
-            {
                 type = _lastType;
-            }
+
             else if (direction.x == 0f && direction.y == 0f) return;
             else type = _lastType = direction.ConvertDirectionFromType();
 

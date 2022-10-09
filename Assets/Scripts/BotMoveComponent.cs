@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace Tanks
 {
@@ -32,6 +31,7 @@ namespace Tanks
             var cell = collision.rigidbody.GetComponent<CellComponent>();
             var collisionFire = collision.rigidbody.GetComponent<FireComponent>();
             var thisBot = _bot.GetComponent<FireComponent>();
+
             if ((cell != null && !cell.DestroyCell) || 
                 (thisBot != null && collisionFire != null && thisBot.GetSide() == collisionFire.GetSide()))
                 RestartCoroutine();
