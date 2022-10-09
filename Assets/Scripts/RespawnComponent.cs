@@ -6,6 +6,7 @@ namespace Tanks
     public class RespawnComponent : MonoBehaviour
     {
         private int _botsCount;
+        private int _maxNumberOfBots;
 
         [SerializeField]
         private float _delayRespawn = 7;
@@ -13,15 +14,17 @@ namespace Tanks
         private Bot _botPrefab;
         [SerializeField]
         private Transform[] _respawnPoinrs;
-        [SerializeField]
-        private int _maxNumberOfBots = 5;
+
 
         private void Start()
-            => StartCoroutine(Respawn());
+        {
+            _maxNumberOfBots = (int)TransferSettings.BotsCount;
+            StartCoroutine(Respawn());
+        }
 
         private IEnumerator Respawn()
         {
-            while (_botsCount <= _maxNumberOfBots - 1)
+            while (_botsCount <= (_maxNumberOfBots - 1))
             {
                 var randomPointNumber = Random.Range(0, _respawnPoinrs.Length);
                 var randomPoint = _respawnPoinrs[randomPointNumber];

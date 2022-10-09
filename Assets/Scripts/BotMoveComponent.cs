@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Tanks
 {
@@ -13,24 +14,26 @@ namespace Tanks
         [SerializeField, Tooltip("Время движения бота в одном направлении")]
         private float _minMoveTime = 1;
         [SerializeField]
-        private float _maxMoveTime = 10;
+        private float _maxMoveTime = 5;
 
         private void Awake()
             => RandomDirectione();
-        
+
         private void Start()
             => _bot = GetComponent<Bot>();
 
         private void Update()
-            => OnMove(_direction);
+        {
+            OnMove(_direction);
+        }
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
             var cell = collision.rigidbody.GetComponent<CellComponent>();
             var collisionFire = collision.rigidbody.GetComponent<FireComponent>();
-            var botFire = _bot.GetComponent<FireComponent>();
+            var thisBot = _bot.GetComponent<FireComponent>();
             if ((cell != null && !cell.DestroyCell) || 
-                (botFire != null && collisionFire != null && botFire.GetSide() == collisionFire.GetSide()))
+                (thisBot != null && collisionFire != null && thisBot.GetSide() == collisionFire.GetSide()))
                 RestartCoroutine();
         }
 

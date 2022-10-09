@@ -14,6 +14,8 @@ namespace Tanks
         private InputAction _move;
         [SerializeField]
         private InputAction _fire;
+        [SerializeField]
+        private AudioSource _movingSound;
 
         private void Start()
         {
@@ -38,6 +40,8 @@ namespace Tanks
             else if (direction.x == 0f && direction.y == 0f) return;
             else type = _lastType = direction.ConvertDirectionFromType();
 
+            _movingSound.Play();
+            _movingSound.volume = TransferSettings.Volume/2;
             _moveComponent.OnMove(type);
         }
 
